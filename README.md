@@ -476,6 +476,10 @@ MIT &copy; 2026 Paperclip
 ---
 
 <p align="center">
+  <img src="doc/assets/dashboard-preview.png" alt="Paperclip — Painel de Gestão" width="720" />
+</p>
+
+<p align="center">
   <img src="doc/assets/footer.png" alt="" width="720" />
 </p>
 
