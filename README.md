@@ -173,11 +173,55 @@ O Paperclip lida com os detalhes difíceis de orquestração corretamente.
 
 Open source. Self-hosted. Sem necessidade de conta no Paperclip.
 
+> **Requisitos:** Node.js 20+, pnpm 9.15+
+
+### Opção 1: npx (mais simples)
+
 ```bash
 npx paperclipai onboard --yes
 ```
 
-Ou manualmente:
+Isso faz tudo automaticamente:
+1. Cria o diretório `~/.paperclip/` com configs, logs e dados
+2. Inicia um PostgreSQL embarcado na porta **54329**
+3. Sobe o servidor na porta **3100**
+4. Abre o navegador em `http://localhost:3100`
+
+O modo padrão é `local_trusted` (sem login, acesso somente local).
+
+#### Comandos úteis após a instalação
+
+```bash
+npx paperclipai run                  # Iniciar o servidor
+npx paperclipai doctor               # Diagnosticar problemas
+npx paperclipai configure            # Reconfigurar
+npx paperclipai auth bootstrap-ceo   # Gerar convite de admin (modo autenticado)
+npx paperclipai db:backup            # Backup manual do banco
+```
+
+#### O que é criado no sistema
+
+| O quê | Onde |
+|-------|------|
+| Configuração | `~/.paperclip/instances/default/config.json` |
+| Banco de dados | `~/.paperclip/instances/default/db/` |
+| Logs | `~/.paperclip/instances/default/logs/` |
+| Backups | `~/.paperclip/instances/default/data/backups/` |
+| Secrets | `~/.paperclip/instances/default/secrets/` |
+| Storage | `~/.paperclip/instances/default/data/storage/` |
+| JWT Secret | `~/.paperclip/instances/default/.env` |
+
+#### Desinstalação
+
+Para remover completamente, basta apagar o diretório:
+
+```bash
+rm -rf ~/.paperclip
+```
+
+Nenhum serviço é instalado no sistema, nenhuma configuração global é alterada.
+
+### Opção 2: Clone do repositório
 
 ```bash
 git clone https://github.com/paperclipai/paperclip.git
@@ -186,9 +230,159 @@ pnpm install
 pnpm dev
 ```
 
-Isso inicia o servidor da API em `http://localhost:3100`. Um banco PostgreSQL embarcado é criado automaticamente — sem configuração necessária.
+### Opção 3: Docker
 
-> **Requisitos:** Node.js 20+, pnpm 9.15+
+O Docker isola tudo dentro do container — ideal para evitar conflitos com o sistema.
+
+**1. Clone o repositório e crie o arquivo `.env`:**
+
+```bash
+git clone https://github.com/paperclipai/paperclip.git
+cd paperclip
+echo "BETTER_AUTH_SECRET=$(openssl rand -hex 32)" > .env
+```
+
+**2. (Opcional) Para acessar de outra máquina na rede,** crie um `docker-compose.override.yml`:
+
+```yaml
+services:
+  paperclip:
+    volumes:
+      - paperclip-data:/paperclip
+    environment:
+      PAPERCLIP_ALLOWED_HOSTNAMES: "SEU_IP,localhost"
+      PAPERCLIP_PUBLIC_URL: "http://SEU_IP:3100"
+
+volumes:
+  paperclip-data:
+```
+
+Substitua `SEU_IP` pelo IP da máquina (ex: `192.168.1.91`).
+
+**3. Suba o container:**
+
+```bash
+# Sem override (acesso local apenas)
+docker compose -f docker-compose.quickstart.yml up --build -d
+
+# Com override (acesso pela rede)
+docker compose -f docker-compose.quickstart.yml -f docker-compose.override.yml up --build -d
+```
+
+**4. Gere o convite de admin:**
+
+No modo Docker, o Paperclip roda em modo `authenticated`. Você precisa gerar um link de convite:
+
+```bash
+docker exec paperclip-paperclip-1 node \
+  --import ./server/node_modules/tsx/dist/loader.mjs \
+  cli/src/index.ts onboard --yes
+```
+
+O link de convite aparecerá no output. Abra-o no navegador para criar sua conta de admin.
+
+**5. Comandos úteis:**
+
+```bash
+# Ver logs
+docker compose -f docker-compose.quickstart.yml logs -f
+
+# Parar
+docker compose -f docker-compose.quickstart.yml down
+
+# Reiniciar após mudanças no código
+docker compose -f docker-compose.quickstart.yml up --build -d
+```
+
+<br/>
+
+## Autenticação dos Agentes (Claude Code, Codex)
+
+Os agentes precisam estar autenticados para funcionar. Existem duas formas:
+
+### Via chaves de API
+
+Adicione as chaves no arquivo `.env`:
+
+```bash
+ANTHROPIC_API_KEY=sk-ant-...    # Para Claude Code
+OPENAI_API_KEY=sk-...           # Para Codex
+```
+
+E reinicie o servidor (ou o container Docker).
+
+### Via OAuth (login interativo)
+
+Se você usa Claude Code ou Codex com assinatura (sem API key), faça login diretamente:
+
+**No modo npx (local):**
+
+```bash
+claude login     # Para Claude Code
+codex login      # Para Codex
+```
+
+**No modo Docker:**
+
+```bash
+docker exec -it paperclip-paperclip-1 claude login
+docker exec -it paperclip-paperclip-1 codex login
+```
+
+Será exibido um link no terminal. Abra-o no navegador, autorize, e o CLI ficará autenticado dentro do ambiente.
+
+**Verificando se funcionou:**
+
+```bash
+# Local
+claude -p "say hello" --max-turns 1
+
+# Docker
+docker exec paperclip-paperclip-1 claude -p "say hello" --max-turns 1
+```
+
+Depois de autenticado, vá até o agente no Paperclip e clique em **"Test now"** na seção "Adapter environment check" para confirmar.
+
+<br/>
+
+## Notas para Windows
+
+O Paperclip funciona no Windows, mas com algumas limitações importantes:
+
+### PostgreSQL embarcado e permissões de Administrador
+
+O PostgreSQL **não pode ser executado como Administrador** no Windows. Isso é uma restrição de segurança do próprio PostgreSQL, não do Paperclip.
+
+**O problema:** Se você abrir o terminal (PowerShell/CMD) como Administrador e rodar `npx paperclipai onboard --yes`, o PostgreSQL embarcado vai falhar com erro de permissão, pois o processo Node.js herda os privilégios elevados.
+
+**Solução:** Rode o Paperclip em um terminal **sem** privilégios de Administrador:
+- Abra o PowerShell ou CMD normalmente (não use "Executar como administrador")
+- Se precisar de Administrador para outra coisa, use um terminal separado
+
+### Recomendações para Windows
+
+| Método | Compatibilidade |
+|--------|----------------|
+| **Docker Desktop** | Melhor opção — tudo isolado, sem problemas de permissão |
+| **WSL2** | Funciona como Linux nativo, sem limitações |
+| **Windows nativo** | Funciona, mas **não rode como Administrador** e os adaptadores de agentes podem ter problemas com paths |
+
+### Problemas conhecidos no Windows nativo
+
+- **Adaptadores de agentes** usam `child_process.spawn` com comandos que assumem Unix — podem falhar
+- **Paths com `\`** — o código usa `node:path` mas não foi testado extensivamente no Windows
+- **Scripts shell** (`.sh`) do repositório não rodam nativamente no Windows
+
+**Recomendação:** Use **Docker Desktop** ou **WSL2** no Windows para evitar todos esses problemas.
+
+<br/>
+
+## Portas utilizadas
+
+| Porta | Serviço |
+|-------|---------|
+| **3100** | Servidor HTTP do Paperclip (API + UI) |
+| **54329** | PostgreSQL embarcado (somente modo local) |
 
 <br/>
 
