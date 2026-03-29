@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="doc/assets/header.png" alt="Paperclip — runs your business" width="720" />
+  <img src="doc/assets/header.png" alt="Paperclip — administra o seu negócio" width="720" />
 </p>
 
 <p align="center">
-  <a href="#quickstart"><strong>Quickstart</strong></a> &middot;
-  <a href="https://paperclip.ing/docs"><strong>Docs</strong></a> &middot;
+  <a href="#inicio-rapido"><strong>Início Rápido</strong></a> &middot;
+  <a href="https://paperclip.ing/docs"><strong>Documentação</strong></a> &middot;
   <a href="https://github.com/paperclipai/paperclip"><strong>GitHub</strong></a> &middot;
   <a href="https://discord.gg/m4HZY7xNG3"><strong>Discord</strong></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/paperclipai/paperclip/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
-  <a href="https://github.com/paperclipai/paperclip/stargazers"><img src="https://img.shields.io/github/stars/paperclipai/paperclip?style=flat" alt="Stars" /></a>
+  <a href="https://github.com/paperclipai/paperclip/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licença MIT" /></a>
+  <a href="https://github.com/paperclipai/paperclip/stargazers"><img src="https://img.shields.io/github/stars/paperclipai/paperclip?style=flat" alt="Estrelas" /></a>
   <a href="https://discord.gg/m4HZY7xNG3"><img src="https://img.shields.io/discord/000000000?label=discord" alt="Discord" /></a>
 </p>
 
@@ -23,34 +23,34 @@
 
 <br/>
 
-## What is Paperclip?
+## O que é o Paperclip?
 
-# Open-source orchestration for zero-human companies
+# Orquestração open-source para empresas sem humanos
 
-**If OpenClaw is an _employee_, Paperclip is the _company_**
+**Se o OpenClaw é um _funcionário_, o Paperclip é a _empresa_**
 
-Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track your agents' work and costs from one dashboard.
+O Paperclip é um servidor Node.js com UI React que orquestra uma equipe de agentes de IA para administrar um negócio. Traga seus próprios agentes, defina metas e acompanhe o trabalho e os custos dos seus agentes em um único painel.
 
-It looks like a task manager — but under the hood it has org charts, budgets, governance, goal alignment, and agent coordination.
+Parece um gerenciador de tarefas — mas por baixo tem organogramas, orçamentos, governança, alinhamento de metas e coordenação de agentes.
 
-**Manage business goals, not pull requests.**
+**Gerencie metas de negócio, não pull requests.**
 
-|        | Step            | Example                                                            |
-| ------ | --------------- | ------------------------------------------------------------------ |
-| **01** | Define the goal | _"Build the #1 AI note-taking app to $1M MRR."_                    |
-| **02** | Hire the team   | CEO, CTO, engineers, designers, marketers — any bot, any provider. |
-| **03** | Approve and run | Review strategy. Set budgets. Hit go. Monitor from the dashboard.  |
+|        | Passo             | Exemplo                                                                        |
+| ------ | ----------------- | ------------------------------------------------------------------------------ |
+| **01** | Defina a meta     | _"Criar o app #1 de notas com IA até $1M MRR."_                               |
+| **02** | Contrate a equipe | CEO, CTO, engenheiros, designers, marketeiros — qualquer bot, qualquer provedor. |
+| **03** | Aprove e execute  | Revise a estratégia. Defina orçamentos. Dê o play. Monitore pelo painel.       |
 
 <br/>
 
-> **COMING SOON: Clipmart** — Download and run entire companies with one click. Browse pre-built company templates — full org structures, agent configs, and skills — and import them into your Paperclip instance in seconds.
+> **EM BREVE: Clipmart** — Baixe e execute empresas inteiras com um clique. Navegue por templates pré-construídos — estruturas organizacionais completas, configs de agentes e habilidades — e importe-os para sua instância do Paperclip em segundos.
 
 <br/>
 
 <div align="center">
 <table>
   <tr>
-    <td align="center"><strong>Works<br/>with</strong></td>
+    <td align="center"><strong>Funciona<br/>com</strong></td>
     <td align="center"><img src="doc/assets/logos/openclaw.svg" width="32" alt="OpenClaw" /><br/><sub>OpenClaw</sub></td>
     <td align="center"><img src="doc/assets/logos/claude.svg" width="32" alt="Claude" /><br/><sub>Claude Code</sub></td>
     <td align="center"><img src="doc/assets/logos/codex.svg" width="32" alt="Codex" /><br/><sub>Codex</sub></td>
@@ -60,124 +60,124 @@ It looks like a task manager — but under the hood it has org charts, budgets, 
   </tr>
 </table>
 
-<em>If it can receive a heartbeat, it's hired.</em>
+<em>Se consegue receber um heartbeat, está contratado.</em>
 
 </div>
 
 <br/>
 
-## Paperclip is right for you if
+## O Paperclip é para você se
 
-- ✅ You want to build **autonomous AI companies**
-- ✅ You **coordinate many different agents** (OpenClaw, Codex, Claude, Cursor) toward a common goal
-- ✅ You have **20 simultaneous Claude Code terminals** open and lose track of what everyone is doing
-- ✅ You want agents running **autonomously 24/7**, but still want to audit work and chime in when needed
-- ✅ You want to **monitor costs** and enforce budgets
-- ✅ You want a process for managing agents that **feels like using a task manager**
-- ✅ You want to manage your autonomous businesses **from your phone**
+- ✅ Você quer construir **empresas autônomas com IA**
+- ✅ Você **coordena vários agentes diferentes** (OpenClaw, Codex, Claude, Cursor) rumo a um objetivo comum
+- ✅ Você tem **20 terminais Claude Code abertos** e perde o controle do que cada um está fazendo
+- ✅ Você quer agentes rodando **autonomamente 24/7**, mas ainda quer auditar o trabalho e intervir quando necessário
+- ✅ Você quer **monitorar custos** e impor orçamentos
+- ✅ Você quer um processo para gerenciar agentes que **pareça um gerenciador de tarefas**
+- ✅ Você quer gerenciar seus negócios autônomos **do celular**
 
 <br/>
 
-## Features
+## Funcionalidades
 
 <table>
 <tr>
 <td align="center" width="33%">
-<h3>🔌 Bring Your Own Agent</h3>
-Any agent, any runtime, one org chart. If it can receive a heartbeat, it's hired.
+<h3>🔌 Traga Seu Próprio Agente</h3>
+Qualquer agente, qualquer runtime, um organograma. Se consegue receber um heartbeat, está contratado.
 </td>
 <td align="center" width="33%">
-<h3>🎯 Goal Alignment</h3>
-Every task traces back to the company mission. Agents know <em>what</em> to do and <em>why</em>.
+<h3>🎯 Alinhamento de Metas</h3>
+Toda tarefa remonta à missão da empresa. Os agentes sabem <em>o que</em> fazer e <em>por quê</em>.
 </td>
 <td align="center" width="33%">
 <h3>💓 Heartbeats</h3>
-Agents wake on a schedule, check work, and act. Delegation flows up and down the org chart.
+Agentes acordam em um cronograma, verificam o trabalho e agem. Delegação flui para cima e para baixo no organograma.
 </td>
 </tr>
 <tr>
 <td align="center">
-<h3>💰 Cost Control</h3>
-Monthly budgets per agent. When they hit the limit, they stop. No runaway costs.
+<h3>💰 Controle de Custos</h3>
+Orçamentos mensais por agente. Quando atingem o limite, param. Sem custos descontrolados.
 </td>
 <td align="center">
-<h3>🏢 Multi-Company</h3>
-One deployment, many companies. Complete data isolation. One control plane for your portfolio.
+<h3>🏢 Multi-Empresa</h3>
+Um deploy, várias empresas. Isolamento completo de dados. Um painel de controle para seu portfólio.
 </td>
 <td align="center">
-<h3>🎫 Ticket System</h3>
-Every conversation traced. Every decision explained. Full tool-call tracing and immutable audit log.
+<h3>🎫 Sistema de Tickets</h3>
+Toda conversa rastreada. Toda decisão explicada. Rastreamento completo de tool-calls e log de auditoria imutável.
 </td>
 </tr>
 <tr>
 <td align="center">
-<h3>🛡️ Governance</h3>
-You're the board. Approve hires, override strategy, pause or terminate any agent — at any time.
+<h3>🛡️ Governança</h3>
+Você é o conselho. Aprove contratações, sobrescreva estratégias, pause ou encerre qualquer agente — a qualquer momento.
 </td>
 <td align="center">
-<h3>📊 Org Chart</h3>
-Hierarchies, roles, reporting lines. Your agents have a boss, a title, and a job description.
+<h3>📊 Organograma</h3>
+Hierarquias, cargos, linhas de reporte. Seus agentes têm um chefe, um título e uma descrição de cargo.
 </td>
 <td align="center">
 <h3>📱 Mobile Ready</h3>
-Monitor and manage your autonomous businesses from anywhere.
+Monitore e gerencie seus negócios autônomos de qualquer lugar.
 </td>
 </tr>
 </table>
 
 <br/>
 
-## Problems Paperclip solves
+## Problemas que o Paperclip resolve
 
-| Without Paperclip                                                                                                                     | With Paperclip                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| ❌ You have 20 Claude Code tabs open and can't track which one does what. On reboot you lose everything.                              | ✅ Tasks are ticket-based, conversations are threaded, sessions persist across reboots.                                                |
-| ❌ You manually gather context from several places to remind your bot what you're actually doing.                                     | ✅ Context flows from the task up through the project and company goals — your agent always knows what to do and why.                  |
-| ❌ Folders of agent configs are disorganized and you're re-inventing task management, communication, and coordination between agents. | ✅ Paperclip gives you org charts, ticketing, delegation, and governance out of the box — so you run a company, not a pile of scripts. |
-| ❌ Runaway loops waste hundreds of dollars of tokens and max your quota before you even know what happened.                           | ✅ Cost tracking surfaces token budgets and throttles agents when they're out. Management prioritizes with budgets.                    |
-| ❌ You have recurring jobs (customer support, social, reports) and have to remember to manually kick them off.                        | ✅ Heartbeats handle regular work on a schedule. Management supervises.                                                                |
-| ❌ You have an idea, you have to find your repo, fire up Claude Code, keep a tab open, and babysit it.                                | ✅ Add a task in Paperclip. Your coding agent works on it until it's done. Management reviews their work.                              |
-
-<br/>
-
-## Why Paperclip is special
-
-Paperclip handles the hard orchestration details correctly.
-
-|                                   |                                                                                                               |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Atomic execution.**             | Task checkout and budget enforcement are atomic, so no double-work and no runaway spend.                      |
-| **Persistent agent state.**       | Agents resume the same task context across heartbeats instead of restarting from scratch.                     |
-| **Runtime skill injection.**      | Agents can learn Paperclip workflows and project context at runtime, without retraining.                      |
-| **Governance with rollback.**     | Approval gates are enforced, config changes are revisioned, and bad changes can be rolled back safely.        |
-| **Goal-aware execution.**         | Tasks carry full goal ancestry so agents consistently see the "why," not just a title.                        |
-| **Portable company templates.**   | Export/import orgs, agents, and skills with secret scrubbing and collision handling.                          |
-| **True multi-company isolation.** | Every entity is company-scoped, so one deployment can run many companies with separate data and audit trails. |
+| Sem Paperclip                                                                                                                            | Com Paperclip                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ❌ Você tem 20 abas do Claude Code abertas e não consegue rastrear o que cada uma faz. Ao reiniciar, perde tudo.                        | ✅ Tarefas são baseadas em tickets, conversas são organizadas em threads, sessões persistem entre reinicializações.                               |
+| ❌ Você junta contexto manualmente de vários lugares para lembrar o bot do que está fazendo.                                             | ✅ O contexto flui da tarefa até o projeto e metas da empresa — seu agente sempre sabe o que fazer e por quê.                                    |
+| ❌ Pastas de configs de agentes desorganizadas e você reinventando gestão de tarefas, comunicação e coordenação entre agentes.           | ✅ O Paperclip oferece organogramas, tickets, delegação e governança prontos — para você gerenciar uma empresa, não uma pilha de scripts.         |
+| ❌ Loops descontrolados gastam centenas de dólares em tokens e estouram sua cota antes de você perceber.                                 | ✅ O rastreamento de custos mostra orçamentos de tokens e limita os agentes quando acabam. A gestão prioriza com orçamentos.                     |
+| ❌ Você tem jobs recorrentes (suporte, redes sociais, relatórios) e precisa lembrar de iniciá-los manualmente.                           | ✅ Heartbeats cuidam do trabalho regular em um cronograma. A gestão supervisiona.                                                                |
+| ❌ Você tem uma ideia, precisa achar o repo, abrir o Claude Code, manter uma aba aberta e ficar monitorando.                            | ✅ Adicione uma tarefa no Paperclip. Seu agente de código trabalha nela até terminar. A gestão revisa o trabalho.                                |
 
 <br/>
 
-## What Paperclip is not
+## Por que o Paperclip é especial
 
-|                              |                                                                                                                      |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Not a chatbot.**           | Agents have jobs, not chat windows.                                                                                  |
-| **Not an agent framework.**  | We don't tell you how to build agents. We tell you how to run a company made of them.                                |
-| **Not a workflow builder.**  | No drag-and-drop pipelines. Paperclip models companies — with org charts, goals, budgets, and governance.            |
-| **Not a prompt manager.**    | Agents bring their own prompts, models, and runtimes. Paperclip manages the organization they work in.               |
-| **Not a single-agent tool.** | This is for teams. If you have one agent, you probably don't need Paperclip. If you have twenty — you definitely do. |
-| **Not a code review tool.**  | Paperclip orchestrates work, not pull requests. Bring your own review process.                                       |
+O Paperclip lida com os detalhes difíceis de orquestração corretamente.
+
+|                                        |                                                                                                                   |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Execução atômica.**                  | Checkout de tarefas e enforcement de orçamento são atômicos — sem trabalho duplicado e sem gastos descontrolados.  |
+| **Estado persistente do agente.**      | Agentes retomam o mesmo contexto da tarefa entre heartbeats, em vez de recomeçar do zero.                         |
+| **Injeção de skills em runtime.**      | Agentes aprendem workflows do Paperclip e contexto do projeto em runtime, sem retreinamento.                      |
+| **Governança com rollback.**           | Gates de aprovação são aplicados, mudanças de config são versionadas e erros podem ser revertidos com segurança.   |
+| **Execução orientada a metas.**        | Tarefas carregam toda a ancestralidade de metas, para que os agentes vejam o "porquê", não apenas o título.       |
+| **Templates de empresas portáteis.**   | Exporte/importe orgs, agentes e skills com remoção de secrets e tratamento de colisões.                           |
+| **Isolamento multi-empresa real.**     | Toda entidade tem escopo de empresa, então um deploy pode rodar várias empresas com dados e auditoria separados.  |
 
 <br/>
 
-## Quickstart
+## O que o Paperclip NÃO é
 
-Open source. Self-hosted. No Paperclip account required.
+|                                      |                                                                                                                          |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| **Não é um chatbot.**                | Agentes têm empregos, não janelas de chat.                                                                               |
+| **Não é um framework de agentes.**   | Não dizemos como construir agentes. Dizemos como administrar uma empresa feita deles.                                    |
+| **Não é um construtor de workflows.**| Sem pipelines drag-and-drop. O Paperclip modela empresas — com organogramas, metas, orçamentos e governança.             |
+| **Não é um gerenciador de prompts.** | Agentes trazem seus próprios prompts, modelos e runtimes. O Paperclip gerencia a organização em que trabalham.            |
+| **Não é ferramenta de agente único.**| Isso é para equipes. Se você tem um agente, provavelmente não precisa do Paperclip. Se tem vinte — com certeza precisa.  |
+| **Não é ferramenta de code review.** | O Paperclip orquestra trabalho, não pull requests. Traga seu próprio processo de revisão.                                |
+
+<br/>
+
+## Início Rápido
+
+Open source. Self-hosted. Sem necessidade de conta no Paperclip.
 
 ```bash
 npx paperclipai onboard --yes
 ```
 
-Or manually:
+Ou manualmente:
 
 ```bash
 git clone https://github.com/paperclipai/paperclip.git
@@ -186,94 +186,94 @@ pnpm install
 pnpm dev
 ```
 
-This starts the API server at `http://localhost:3100`. An embedded PostgreSQL database is created automatically — no setup required.
+Isso inicia o servidor da API em `http://localhost:3100`. Um banco PostgreSQL embarcado é criado automaticamente — sem configuração necessária.
 
-> **Requirements:** Node.js 20+, pnpm 9.15+
+> **Requisitos:** Node.js 20+, pnpm 9.15+
 
 <br/>
 
 ## FAQ
 
-**What does a typical setup look like?**
-Locally, a single Node.js process manages an embedded Postgres and local file storage. For production, point it at your own Postgres and deploy however you like. Configure projects, agents, and goals — the agents take care of the rest.
+**Como é um setup típico?**
+Localmente, um único processo Node.js gerencia um Postgres embarcado e armazenamento local de arquivos. Para produção, aponte para seu próprio Postgres e faça deploy como preferir. Configure projetos, agentes e metas — os agentes cuidam do resto.
 
-If you're a solo-entreprenuer you can use Tailscale to access Paperclip on the go. Then later you can deploy to e.g. Vercel when you need it.
+Se você é um empreendedor solo, pode usar o Tailscale para acessar o Paperclip de qualquer lugar. Depois pode fazer deploy em, por exemplo, Vercel quando precisar.
 
-**Can I run multiple companies?**
-Yes. A single deployment can run an unlimited number of companies with complete data isolation.
+**Posso rodar múltiplas empresas?**
+Sim. Um único deploy pode rodar um número ilimitado de empresas com isolamento completo de dados.
 
-**How is Paperclip different from agents like OpenClaw or Claude Code?**
-Paperclip _uses_ those agents. It orchestrates them into a company — with org charts, budgets, goals, governance, and accountability.
+**Como o Paperclip é diferente de agentes como OpenClaw ou Claude Code?**
+O Paperclip _usa_ esses agentes. Ele os orquestra em uma empresa — com organogramas, orçamentos, metas, governança e responsabilização.
 
-**Why should I use Paperclip instead of just pointing my OpenClaw to Asana or Trello?**
-Agent orchestration has subtleties in how you coordinate who has work checked out, how to maintain sessions, monitoring costs, establishing governance - Paperclip does this for you.
+**Por que usar o Paperclip em vez de apontar meu OpenClaw para o Asana ou Trello?**
+A orquestração de agentes tem sutilezas em como você coordena quem tem trabalho em checkout, como manter sessões, monitorar custos, estabelecer governança — o Paperclip faz isso por você.
 
-(Bring-your-own-ticket-system is on the Roadmap)
+(Traga-seu-próprio-sistema-de-tickets está no Roadmap)
 
-**Do agents run continuously?**
-By default, agents run on scheduled heartbeats and event-based triggers (task assignment, @-mentions). You can also hook in continuous agents like OpenClaw. You bring your agent and Paperclip coordinates.
+**Os agentes rodam continuamente?**
+Por padrão, agentes rodam em heartbeats agendados e triggers baseados em eventos (atribuição de tarefa, @menções). Você também pode integrar agentes contínuos como o OpenClaw. Você traz seu agente e o Paperclip coordena.
 
 <br/>
 
-## Development
+## Desenvolvimento
 
 ```bash
-pnpm dev              # Full dev (API + UI, watch mode)
-pnpm dev:once         # Full dev without file watching
-pnpm dev:server       # Server only
-pnpm build            # Build all
-pnpm typecheck        # Type checking
-pnpm test:run         # Run tests
-pnpm db:generate      # Generate DB migration
-pnpm db:migrate       # Apply migrations
+pnpm dev              # Dev completo (API + UI, modo watch)
+pnpm dev:once         # Dev completo sem file watching
+pnpm dev:server       # Apenas servidor
+pnpm build            # Build completo
+pnpm typecheck        # Verificação de tipos
+pnpm test:run         # Rodar testes
+pnpm db:generate      # Gerar migração do DB
+pnpm db:migrate       # Aplicar migrações
 ```
 
-See [doc/DEVELOPING.md](doc/DEVELOPING.md) for the full development guide.
+Veja [doc/DEVELOPING.md](doc/DEVELOPING.md) para o guia completo de desenvolvimento.
 
 <br/>
 
 ## Roadmap
 
-- ✅ Plugin system (e.g. add a knowledge base, custom tracing, queues, etc)
-- ✅ Get OpenClaw / claw-style agent employees
-- ✅ companies.sh - import and export entire organizations
-- ✅ Easy AGENTS.md configurations
-- ✅ Skills Manager
-- ✅ Scheduled Routines
-- ✅ Better Budgeting
-- ⚪ Artifacts & Deployments
-- ⚪ CEO Chat
-- ⚪ MAXIMIZER MODE
-- ⚪ Multiple Human Users
-- ⚪ Cloud / Sandbox agents (e.g. Cursor / e2b agents)
-- ⚪ Cloud deployments
-- ⚪ Desktop App
+- ✅ Sistema de plugins (ex: adicionar base de conhecimento, tracing customizado, filas, etc)
+- ✅ Agentes OpenClaw / estilo claw
+- ✅ companies.sh - importar e exportar organizações inteiras
+- ✅ Configurações fáceis via AGENTS.md
+- ✅ Gerenciador de Skills
+- ✅ Rotinas Agendadas
+- ✅ Orçamentos Aprimorados
+- ⚪ Artefatos & Deploys
+- ⚪ Chat com CEO
+- ⚪ MODO MAXIMIZADOR
+- ⚪ Múltiplos Usuários Humanos
+- ⚪ Agentes Cloud / Sandbox (ex: Cursor / e2b)
+- ⚪ Deploys em nuvem
+- ⚪ App Desktop
 
 <br/>
 
-## Community & Plugins
+## Comunidade & Plugins
 
-Find Plugins and more at [awesome-paperclip](https://github.com/gsxdsm/awesome-paperclip)
+Encontre plugins e mais em [awesome-paperclip](https://github.com/gsxdsm/awesome-paperclip)
 
-## Contributing
+## Contribuindo
 
-We welcome contributions. See the [contributing guide](CONTRIBUTING.md) for details.
-
-<br/>
-
-## Community
-
-- [Discord](https://discord.gg/m4HZY7xNG3) — Join the community
-- [GitHub Issues](https://github.com/paperclipai/paperclip/issues) — bugs and feature requests
-- [GitHub Discussions](https://github.com/paperclipai/paperclip/discussions) — ideas and RFC
+Contribuições são bem-vindas. Veja o [guia de contribuição](CONTRIBUTING.md) para detalhes.
 
 <br/>
 
-## License
+## Comunidade
+
+- [Discord](https://discord.gg/m4HZY7xNG3) — Junte-se à comunidade
+- [GitHub Issues](https://github.com/paperclipai/paperclip/issues) — bugs e pedidos de funcionalidades
+- [GitHub Discussions](https://github.com/paperclipai/paperclip/discussions) — ideias e RFCs
+
+<br/>
+
+## Licença
 
 MIT &copy; 2026 Paperclip
 
-## Star History
+## Histórico de Estrelas
 
 [![Star History Chart](https://api.star-history.com/image?repos=paperclipai/paperclip&type=date&legend=top-left)](https://www.star-history.com/?repos=paperclipai%2Fpaperclip&type=date&legend=top-left)
 
@@ -286,5 +286,5 @@ MIT &copy; 2026 Paperclip
 </p>
 
 <p align="center">
-  <sub>Open source under MIT. Built for people who want to run companies, not babysit agents.</sub>
+  <sub>Open source sob MIT. Feito para quem quer administrar empresas, não ficar de babá de agentes.</sub>
 </p>
