@@ -476,7 +476,7 @@ MIT &copy; 2026 Paperclip
 ---
 
 <p align="center">
-  <img src="doc/assets/footer.jpg" alt="" width="720" />
+  <img src="doc/assets/footer.png" alt="" width="720" />
 </p>
 
 <p align="center">
